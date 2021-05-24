@@ -29,7 +29,7 @@
  <!--                       <li th:if = "${category.equals('all')">
                             <a th:href="@{/list/jobs(column=${category.key},value=${item})}" th:text="${item}"></a>
                         </li>
--->
+-->// need to use an th: if for "all category that sets the value to the id
                         <li th:each="item : ${category.value}">
                             <a th:href="@{/list/jobs(column=${category.key},value=${item})}" th:text="${item}"></a>
                         </li>
