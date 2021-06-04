@@ -24,7 +24,7 @@ public class ListController extends TechJobsController{
     public ListController () {
 
 
-        tableChoices.put("all",JobData.findAll()); // TO-DO #2
+        tableChoices.put("all","All Jobs"); //JobData.findAll()); // TO-DO #2
         tableChoices.put("employer", JobData.getAllEmployers());
         tableChoices.put("location", JobData.getAllLocations());
         tableChoices.put("positionType", JobData.getAllPositionTypes());
@@ -35,7 +35,7 @@ public class ListController extends TechJobsController{
     public String list(Model model) {
         model.addAttribute("columns", columnChoices);
         model.addAttribute("tableChoices", tableChoices);
-        model.addAttribute("all",JobData.findAll()); // TO-DO #2
+        model.addAttribute("all", "All Jobs");  //JobData.findAll()); // TO-DO #2
         model.addAttribute("employers", JobData.getAllEmployers());
         model.addAttribute("locations", JobData.getAllLocations());
         model.addAttribute("positions", JobData.getAllPositionTypes());
